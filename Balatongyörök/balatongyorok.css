@@ -1,0 +1,30 @@
+body{
+    background-image: url(back.jpg);
+    width: 1000px;
+    margin-left: auto;
+   margin-right: auto;
+}
+table{
+  text-align:center  
+}
+div {
+    min-width: 650px;
+    max-width: 1000px;
+  }
+
+}
+.cimer{
+    float:right;
+}
+.header img1 {
+    position: absolute;
+    min-width: 650px;
+   max-width: 1000px;
+   height: 350px;
+  }
+  
+  .header h1 {
+    position: relative;
+    top: -350px;
+    left: 10px;
+  }
