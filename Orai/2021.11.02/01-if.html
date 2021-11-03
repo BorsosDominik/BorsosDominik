@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If példa</title>
+    <script>
+        function osszeg(f){
+            let c = parseInt(f);
+
+            if (fiz < 300000){
+                fiz += c;
+                alert("Az új fizetés = "+fiz);
+            }
+            else{
+                alert("Már így is sokat keres!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        let fiz = 100000;
+    </script>
+    <form name="urlap"> 
+        Fizetés emelést kérek:
+    <input type="number" name="fizu" id="fizu" value="50000"><br>
+    <input type="button" value="Emelés" onclick="osszeg(document.urlap.fizu.value)">
+    </form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch példa</title>
+    <script>
+        function jegy(e,f){
+            let mp = parseInt(e);
+            let p = parseInt(f);
+            let s = p / mp * 100;
+            switch (true){
+                case (s < 40):
+                    alert("Elégtelen");
+                break;
+                case (s < 55):
+                    alert("Elégséges");
+                break;
+                case (s < 70):
+                    alert("Közepes");
+                break;
+                case (s < 85):
+                    alert("Jó");
+                break;
+                case (s < 101):
+                    alert("Jeles");
+                break;
+                default:
+                    alert("Hibás adat");
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="urlap">
+        Elérhető pontszám:<br>
+        <input type="number" name="maxpont" id="maxpont"><br>
+        Kapott pontszám:<br>
+        <input type="number" name="pont" id="pont"><br>
+        <input type="button" value="Jegy" onclick="jegy(document.urlap.pont.maxpont.value,
+         document.urlap.pont.value)">
+    </form>
+</body>
+</html>
