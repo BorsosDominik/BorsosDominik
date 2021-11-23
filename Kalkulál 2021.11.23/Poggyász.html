@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="freecalculator">
+        <label>Adja meg a város nevét:</label>
+        <select id="town" onclick="popMenu(document.freecalculator.town)">
+        <option>válasszon várost</option>
+        </select>
+        <label>Adja meg a csomag súlyát(kg):</label>
+         <input tpye="number" name="weight" id="weight">
+    
+    <input type="button" value="kalkulal" onclick ="freecalculator(document.freecalculator.town.value, document.freecalculator.weight.value)";>
+
+
+    </form>
+
+    <script>
+         function popMenu(t){       
+            /*Tömb amiben a városok nevei, és a távolság van megadva Debrecentől számítva (km-ben)*/
+            var townList = [['Budapest', 292],['Szeged', 230],     
+             ['Miskolc', 114],['Pécs', 474],['Győr', 377],
+             ['Nyíregyháza', 50],['Kecskemét', 104],['Székesfehérvár', 317],
+             ['Szombathely', 458],['Szolnok', 130]]
+            
+            if(t.options.length == 1)
+            {
+                for(var i =0; i < townList.length; i++ ){
+
+                
+                var towns = townList[i]
+                var el = document.createElement=("option");
+                el.textContent = towns[0];
+             el.value = towns[1];
+             t.appendChild(el);
+                }
+            function freecalculator(d,w){
+            var weightFee = w * 100;    /*A súlydíj megadása*/
+            var distanceFee = d * 150;  /*A távolságdíj megadása*/
+            var total= weightFee + distanceFee + 2000; /*Az alapdíj a távolságdíj és a súlydíj összegzése */
+            
+        }
+        /*Az eredmény kiszámolásának képlete*/
+            alert("alapdíj: 2000Ft," + "Súlydíj " + weightFee +"Ft," + "km díj" + distanceFee + "Ft," + "összesen " + total + "Ft")
+        }
+        </script>
+</body>
+</html>
+
+
+}
